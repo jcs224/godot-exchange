@@ -1,0 +1,68 @@
+@import "settings";
+@import "foundation";
+
+#top-bar {
+    @media #{$large-up} {
+        margin-bottom: 30px;
+    }
+    
+    .name h1 a:before {
+        background-image: url('../images/godot_icon.png');
+        background-repeat: no-repeat;
+        content: "";
+        display: inline-block;
+        height: 35px;
+        margin-top: 5px;
+        margin-right: 10px;
+        position: relative;
+        top: 11px;
+        width: 35px;
+    }
+
+    .name h1 a {
+        position: relative;
+        bottom: 12px;
+    }
+    
+    #search-button {
+        padding-top: 5px;
+    }
+}
+
+#banner-column-2-id {
+    margin-top: 20px;
+    
+    #banner-buttons {
+        margin-top: 40px;
+    }
+}
+
+.feature-list {
+    margin-top: 25px;
+    
+    @media #{$medium-only} {
+        font-size: rem-calc(22);
+    }
+    
+    @media #{$large-up} {
+        font-size: rem-calc(27);
+    }
+    
+    li {
+        list-style-type: none;
+    }
+    
+    i.fi-check {
+        color: green;
+        margin-right: 10px;
+    }
+}
+
+#footer {
+    background-color: $oil;
+    
+    p {
+        color: white;
+        margin-top: 20px;
+    }
+}
