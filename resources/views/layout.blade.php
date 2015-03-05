@@ -49,7 +49,7 @@
             <div class="row">
                 <div class="show-for-large-up">
                     <div class="medium-4 columns">
-                    <img src="images/godot.jpg">
+                    <img src="images/godot_logo.jpg">
                 </div>
                 </div>
                 
