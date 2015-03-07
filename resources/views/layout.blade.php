@@ -5,24 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Godot Exchange Center</title>
     <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="stylesheets/app.css" />
-    <link rel="stylesheet" href="stylesheets/foundation-icons/foundation-icons.css" />
-    <script src="bower_components/modernizr/modernizr.js"></script>
+    <link rel="stylesheet" href="{{ URL::to("stylesheets/app.css") }}" />
+    <link rel="stylesheet" href="{{ URL::to("stylesheets/foundation-icons/foundation-icons.css") }}" />
+    <script src="{{ URL::to("bower_components/modernizr/modernizr.js") }}"></script>
 </head>
 <body>
     <div class="contain-to-grid">
         <nav id="top-bar" class="top-bar" data-topbar role="navigation">
             <ul class="title-area">
                 <li class="name">
-                    <h1><a href="#">Godot Exchange</a></h1>
+                    <h1><a href="{{ URL::to("/") }}">Godot Exchange</a></h1>
                 </li>
                 <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
             </ul>
 
             <section class="top-bar-section">
                 <ul class="right">
-                    <li><a href="#"><i class="fi-clipboard-pencil"></i> Register</a></li>
-                    <li><a href="#"><i class="fi-arrow-right"></i> Log In</a></li>
+                    <li><a href="{{ URL::to("auth/register") }}"><i class="fi-clipboard-pencil"></i> Register</a></li>
+                    <li><a href="{{ URL::to("auth/login") }}"><i class="fi-arrow-right"></i> Log In</a></li>
                 </ul>
 
                 <ul class="left">
@@ -53,14 +53,14 @@
     <div id="footer">
         <div class="row">
             <div class="large-12 columns">
-                <p>&COPY;2015 Godot Exchange. All Rights Reserved.</p>
+                <p>&COPY;{{ date('Y') }} Godot Exchange. All Rights Reserved.</p>
             </div>
         </div>
     </div>
     
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/foundation/js/foundation.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="{{ URL::to("bower_components/jquery/dist/jquery.min.js") }}"></script>
+    <script src="{{ URL::to("bower_components/foundation/js/foundation.min.js") }}"></script>
+    <script src="{{ URL::to("js/app.js") }}"></script>
 </body>
 </html>
 

@@ -20,7 +20,7 @@
         </ul>
         <div id="banner-buttons">
             <a href="#" class="button large">Browse files</a>
-            <a href="#" class="button large">Register</a>
+            <a href="{{ URL::to("auth/register") }}" class="button large">Register</a>
         </div>
     </div>
 </div>
