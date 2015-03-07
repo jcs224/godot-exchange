@@ -27,13 +27,6 @@
                 </div>
                 <div class="row">
                     <div class="large-12 columns">
-                        <label>Username
-                            <input type="text" name="username" value="{{ old("username") }}">
-                        </label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="large-12 columns">
                         <label>Email
                             <input type="email" name="email" value="{{ old("email") }}">
                         </label>
