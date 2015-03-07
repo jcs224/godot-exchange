@@ -9230,3 +9230,12 @@ th.hide-for-touch {
   color: white;
   margin-top: 20px;
 }
+
+/* line 70, ../scss/app.scss */
+.errors {
+  color: red;
+}
+/* line 73, ../scss/app.scss */
+.errors li {
+  color: red;
+}
