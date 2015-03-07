@@ -7,6 +7,7 @@
     <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="{{ URL::to("stylesheets/app.css") }}" />
     <link rel="stylesheet" href="{{ URL::to("stylesheets/foundation-icons/foundation-icons.css") }}" />
+    @yield("styles")
     <script src="{{ URL::to("bower_components/modernizr/modernizr.js") }}"></script>
 </head>
 <body>
@@ -61,6 +62,8 @@
     <script src="{{ URL::to("bower_components/jquery/dist/jquery.min.js") }}"></script>
     <script src="{{ URL::to("bower_components/foundation/js/foundation.min.js") }}"></script>
     <script src="{{ URL::to("js/app.js") }}"></script>
+    
+    @yield("scripts")
 </body>
 </html>
 
