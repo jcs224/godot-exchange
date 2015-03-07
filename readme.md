@@ -1,5 +1,5 @@
 # Godot Exchange
 
-This is an asset-trading website for the Godot game engine community. It is an open-source web project built on the [Laravel PHP framework](http://laravel.com).
+This is an asset-trading website for the Godot game engine community. It is a web application built with [Laravel](http://laravel.com) and [ZURB Foundation](http://foundation.zurb.com/).
 
-All contributions are welcome!
+This open-source project is licensed under the [MIT license](http://opensource.org/licenses/MIT).
