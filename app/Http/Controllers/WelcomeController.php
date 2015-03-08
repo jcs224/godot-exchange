@@ -1,15 +1,15 @@
 <?php namespace App\Http\Controllers;
 
-class HomeController extends Controller {
+class WelcomeController extends Controller {
 
 	/*
 	|--------------------------------------------------------------------------
-	| Home Controller
+	| Welcome Controller
 	|--------------------------------------------------------------------------
 	|
-	| This controller renders your application's "dashboard" for users that
-	| are authenticated. Of course, you are free to change or remove the
-	| controller as you wish. It is just here to get your app started!
+	| This controller renders the "marketing page" for the application and
+	| is configured to only allow guests. Like most of the other sample
+	| controllers, you are free to modify or remove it as you desire.
 	|
 	*/
 
@@ -20,17 +20,17 @@ class HomeController extends Controller {
 	 */
 	public function __construct()
 	{
-		$this->middleware('auth');
+		$this->middleware('guest');
 	}
 
 	/**
-	 * Show the application dashboard to the user.
+	 * Show the application welcome screen to the user.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		return view('home');
+		return view('welcome');
 	}
 
 }
