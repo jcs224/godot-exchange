@@ -28,7 +28,7 @@
                 <div class="row">
                     <div class="large-12 columns">
                         <label>Password
-                            <input type="password" name="username">
+                            <input type="password" name="password">
                         </label>
                     </div>
                 </div>
