@@ -28,7 +28,9 @@
                     @else
                         <li class="has-dropdown">
                             <a href="#">{{ Auth::user()->name }}</a>
-                            <li><a href="{{ url("auth/logout")}}"><i class="fi-arrow-left"></i> Log Out</a></li>
+                            <ul class="dropdown">
+                                <li><a href="{{ url("auth/logout")}}"><i class="fi-arrow-left"></i> Log Out</a></li>
+                            </ul>
                         </li>
                     @endif
                 </ul>
