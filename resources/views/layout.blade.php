@@ -22,8 +22,15 @@
 
             <section class="top-bar-section">
                 <ul class="right">
-                    <li><a href="{{ url("auth/register") }}"><i class="fi-clipboard-pencil"></i> Register</a></li>
-                    <li><a href="{{ url("auth/login") }}"><i class="fi-arrow-right"></i> Log In</a></li>
+                    @if (Auth::guest())
+                        <li><a href="{{ url("auth/register") }}"><i class="fi-clipboard-pencil"></i> Register</a></li>
+                        <li><a href="{{ url("auth/login") }}"><i class="fi-arrow-right"></i> Log In</a></li>
+                    @else
+                        <li class="has-dropdown">
+                            <a href="#">{{ Auth::user()->name }}</a>
+                            <li><a href="{{ url("auth/logout")}}"><i class="fi-arrow-left"></i> Log Out</a></li>
+                        </li>
+                    @endif
                 </ul>
 
                 <ul class="left">
@@ -44,13 +51,13 @@
             </section>
         </nav>
     </div>
-    
+
     <div class="row">
         <div class="large-12 columns">
             @yield("content")
         </div>
     </div>
-    
+
     <div id="footer">
         <div class="row">
             <div class="large-12 columns">
@@ -58,11 +65,11 @@
             </div>
         </div>
     </div>
-    
+
     <script src="{{ url("bower_components/jquery/dist/jquery.min.js") }}"></script>
     <script src="{{ url("bower_components/foundation/js/foundation.min.js") }}"></script>
     <script src="{{ url("js/app.js") }}"></script>
-    
+
     @yield("scripts")
 </body>
 </html>

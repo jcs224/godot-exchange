@@ -14,10 +14,10 @@
                 </ul>
             </div>
             @endif
-            
+
             <form role="form" method="POST" action="{{ url("auth/register") }}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                
+
                 <div class="row">
                     <div class="large-12 columns">
                         <label>Name (optional)
