@@ -31,7 +31,7 @@
                 <div class="row">
                     <div class="medium-12 columns">
                         <label>Description</label>
-                        <textarea rows="4"></textarea>
+                        <textarea rows="4" name="description"></textarea>
                     </div>
                 </div>
                 <div class="row">
