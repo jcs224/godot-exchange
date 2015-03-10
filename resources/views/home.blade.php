@@ -20,7 +20,11 @@
         </ul>
         <div id="banner-buttons">
             <a href="#" class="button large">Browse files</a>
+            @if (Auth::guest())
             <a href="{{ URL::to("auth/register") }}" class="button large">Register</a>
+            @else
+            <a href="{{ URL::to("assets/create") }}" class="button large">Upload</a>
+            @endif
         </div>
     </div>
 </div>
