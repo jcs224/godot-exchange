@@ -26,7 +26,7 @@
                         <li><a href="{{ url("auth/register") }}"><i class="fi-clipboard-pencil"></i> Register</a></li>
                         <li><a href="{{ url("auth/login") }}"><i class="fi-arrow-right"></i> Log In</a></li>
                     @else
-                        <li><a href="#"><i class="fi-plus"></i> Upload</a></li>
+                        <li><a href="{{ url("assets/create") }}"><i class="fi-plus"></i> Upload</a></li>
                         <li class="has-dropdown">
                             <a href="#">{{ Auth::user()->name }}</a>
                             <ul class="dropdown">
