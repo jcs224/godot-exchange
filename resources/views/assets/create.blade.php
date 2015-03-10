@@ -4,7 +4,8 @@
 <div class="row">
     <div class="medium-6 medium-offset-3 columns">
         <div class="panel">
-            <form action="#" method="post">
+            <form action="{{ url("assets") }}" method="post">
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="row">
                     <div class="medium-12 columns">
                         <label>Type
@@ -13,8 +14,8 @@
                                 <option value="3d">3D Art</option>
                                 <option value="music">Music</option>
                                 <option value="sfx">Sound FX</option>
+                                <option value="plugin">Engine Plugin</option>
                                 <option value="project">Godot Project</option>
-                                <option value="tutorial">Tutorial</option>
                                 <option value="bundle">Bundle (.zip file, combination of different types)</option>
                             </select>
                         </label>
@@ -25,6 +26,12 @@
                         <label for="">Name
                             <input type="text" name="name">
                         </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="medium-12 columns">
+                        <label>Description</label>
+                        <textarea rows="4"></textarea>
                     </div>
                 </div>
                 <div class="row">
