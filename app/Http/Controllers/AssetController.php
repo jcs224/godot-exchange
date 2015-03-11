@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 
+use App\Asset;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -32,9 +33,25 @@ class AssetController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		$asset = new Asset;
+
+		$asset_screenshot = $request->file("screenshot");
+		$asset_file = $request->file("asset");
+
+		$asset_screenshot->move(env("SCREENSHOT_STORAGE_PATH"), $asset_screenshot->getClientOriginalName());
+		$asset_file->move(env("ASSET_STORAGE_PATH"), $asset_file->getClientOriginalName());
+
+		$asset->type = $request->input("type");
+		$asset->name = $request->input("name");
+		$asset->description = $request->input("description");
+		$asset->screenshot_path = env("SCREENSHOT_STORAGE_PATH") . $asset_screenshot->getClientOriginalName();
+		$asset->asset_path = env("ASSET_STORAGE_PATH") . $asset_file->getClientOriginalName();
+
+		$asset->save();
+
+		return redirect("/");
 	}
 
 	/**
@@ -45,7 +62,7 @@ class AssetController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		return view("assets.show");
 	}
 
 	/**

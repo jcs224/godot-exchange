@@ -4,12 +4,12 @@
 <div class="row">
     <div class="medium-6 medium-offset-3 columns">
         <div class="panel">
-            <form action="{{ url("assets") }}" method="post">
+            <form action="{{ url("assets") }}" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="row">
                     <div class="medium-12 columns">
                         <label>Type
-                            <select>
+                            <select name="type">
                                 @foreach ($asset_types as $key => $value)
                                     <option value="{{ $key }}">{{ $value }}</option>
                                 @endforeach
