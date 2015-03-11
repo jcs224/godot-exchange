@@ -10,13 +10,9 @@
                     <div class="medium-12 columns">
                         <label>Type
                             <select>
-                                <option value="2d">2D Art</option>
-                                <option value="3d">3D Art</option>
-                                <option value="music">Music</option>
-                                <option value="sfx">Sound FX</option>
-                                <option value="plugin">Engine Plugin</option>
-                                <option value="project">Godot Project</option>
-                                <option value="bundle">Bundle (.zip file, combination of different types)</option>
+                                @foreach ($asset_types as $key => $value)
+                                    <option value="{{ $key }}">{{ $value }}</option>
+                                @endforeach
                             </select>
                         </label>
                     </div>

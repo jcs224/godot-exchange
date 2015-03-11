@@ -11,7 +11,17 @@ class AppServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		//
+		view()->share("asset_types", array(
+			"2d" => "2D Art",
+			"3d" => "3D Art",
+			"music" => "Music",
+			"sfx" => "Sound FX",
+			"scripts" => "Script(s)",
+			"scenes" => "Scene File(s)",
+			"plugin" => "Engine Plugin(s)",
+			"project" => "Godot Project(s)",
+			"bundle" => "Bundle (.zip file, combination of different types)"
+		));
 	}
 
 	/**
