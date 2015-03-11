@@ -16,8 +16,8 @@ class AppServiceProvider extends ServiceProvider {
 			"3d" => "3D Art",
 			"music" => "Music",
 			"sfx" => "Sound FX",
-			"scripts" => "Script(s)",
-			"scenes" => "Scene File(s)",
+			"script" => "Script(s)",
+			"scene" => "Scene File(s)",
 			"plugin" => "Engine Plugin(s)",
 			"project" => "Godot Project(s)",
 			"bundle" => "Bundle (.zip file, combination of different types)"
