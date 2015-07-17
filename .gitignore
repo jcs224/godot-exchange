@@ -3,3 +3,6 @@
 .env
 .env2
 /nbproject
+/.idea
+.DS_Store
+/storage/.DS_Store
