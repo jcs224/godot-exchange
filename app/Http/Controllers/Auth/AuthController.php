@@ -3,7 +3,7 @@
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use App\User;
-use Illuminate\Validation\Validator;
+use Validator;
 
 class AuthController extends Controller {
 

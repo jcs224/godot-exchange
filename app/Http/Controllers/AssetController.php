@@ -5,6 +5,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class AssetController extends Controller {
 
@@ -40,14 +41,14 @@ class AssetController extends Controller {
 		$asset_screenshot = $request->file("screenshot");
 		$asset_file = $request->file("asset");
 
-		$asset_screenshot->move(env("SCREENSHOT_STORAGE_PATH"), $asset_screenshot->getClientOriginalName());
-		$asset_file->move(env("ASSET_STORAGE_PATH"), $asset_file->getClientOriginalName());
+		$asset_screenshot->move(env("USER_STORAGE_PATH") . "/" . Auth::user()->username . "/screenshots/", $asset_screenshot->getClientOriginalName());
+		$asset_file->move(env("USER_STORAGE_PATH") . "/" . Auth::user()->username . "/assets/", $asset_file->getClientOriginalName());
 
 		$asset->type = $request->input("type");
 		$asset->name = $request->input("name");
 		$asset->description = $request->input("description");
-		$asset->screenshot_path = env("SCREENSHOT_STORAGE_PATH") . $asset_screenshot->getClientOriginalName();
-		$asset->asset_path = env("ASSET_STORAGE_PATH") . $asset_file->getClientOriginalName();
+		$asset->screenshot_path = env("USER_STORAGE_PATH") . "/" . Auth::user()->username . "/screenshots/" . $asset_screenshot->getClientOriginalName();
+		$asset->asset_path = env("USER_STORAGE_PATH") . "/" . Auth::user()->username . "/assets/" . $asset_file->getClientOriginalName();
 
 		$asset->save();
 
